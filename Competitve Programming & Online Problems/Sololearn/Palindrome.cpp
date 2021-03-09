@@ -30,5 +30,8 @@ int main() {
     else {
         cout << n<<" is NOT a palindrome";
     }
+
+
+
     return 0;
 }
