@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-#define LOG(X) std::cout << x << std::endl
+#define LOG(x) std::cout << x << std::endl
 
 
 //create a player class ex: for a game, with x & y attributes for his position along with speed
@@ -34,9 +34,15 @@ using namespace std;
 int main(){
 
     Player playerA; //create a player type object and instantiate
-    std::cout << playerA.Pos_x << endl << playerA.Pos_y <<endl;
+    
+    //print values before moving
+    LOG(playerA.Pos_x);
+    LOG(playerA.Pos_y);
     playerA.Move(1, -1, 10);
-    std::cout << playerA.Pos_x << endl << playerA.Pos_y <<endl;
+
+    LOG(playerA.Pos_x);
+    LOG(playerA.Pos_y);
+
     // std::cin.get();
     return 0;
 }
