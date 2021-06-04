@@ -14,18 +14,15 @@ class Log{
 
     //public & private variables
     public:
-        enum LogLevel{
+        enum LogLevel:unsigned char{
             LogLevelError,
             LogLevelWarning,
             LogLevelInformation
             };
 
-        // const int LogLevelError         = 0;
-        // const int LogLevelWarning       = 1;
-        // const int LogLevelInformation   = 2;
 
     private:
-        int m_LogLevel; //private member variable to hold loglevel
+        LogLevel m_LogLevel; //private member variable to hold loglevel and restrict it to those 3values
 
 
 
@@ -60,7 +57,7 @@ class Log{
 int main(){
 
     Log log;
-    log.SetLevel(log.LogLevelError);
+    log.SetLevel(Log::LogLevelError); //Now enum values exist directly under Log class namespace
     log.Warn("Hello!");
     log.Error("Hello");
     log.Info("Hello");
