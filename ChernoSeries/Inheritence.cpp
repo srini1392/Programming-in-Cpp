@@ -24,12 +24,6 @@ class Entity{
 class Player : public Entity {
     public:
         const char* Name;
-        float X,Y;
-
-        void Move(float xa, float ya){
-            X+= xa;
-            Y+= ya;
-        }
 
         void PrintName(){
             std::cout << Name << std::endl;
@@ -49,7 +43,5 @@ int main(){
     std::cout << sizeof(Player) << std::endl;
 
 
-    // player.PrintName("Player unknown battle ground");
-    // std::cin.get();
     return 0;
 }
